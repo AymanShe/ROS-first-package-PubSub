@@ -32,4 +32,4 @@ ROS Melodic Morenia
 
 https://wiki.ros.org/melodic  
 https://wiki.ros.org/ROS/Tutorials  
-https://youtu.be/PowY8dV36DY
+https://youtube.com/playlist?list=PLBbhfIdh4NdgBBkX7q0Y3UukO2_ZoICee
