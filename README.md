@@ -16,14 +16,14 @@ ROS Melodic Morenia
      $ roscore
     ```
 
-1. In two different terminals, run the nodes *talker.py* and *listener*  
+1. In two different terminals, run the nodes *publisher.py* and *subscriber*  
     ```
      $ source devel/setup.bash  
-     $ rosrun ayman_package talker.py
+     $ rosrun ayman_package publisher.py
     ```
     ``` 
      $ source devel/setup.bash  
-     $ rosrun ayman_package listener
+     $ rosrun ayman_package subscriber
     ```
     
     
