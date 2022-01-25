@@ -33,9 +33,9 @@
  * This tutorial demonstrates simple receipt of messages over the ROS system.
  */
 // %Tag(CALLBACK)%
-void chatterCallback(const std_msgs::String::ConstPtr& msg)
+void islandCallback(const std_msgs::String::ConstPtr& msg)
 {
-  ROS_INFO("I registered: [%s]", msg->data.c_str());
+  ROS_INFO("Code registered: [%s] from unknown", msg->data.c_str());
 }
 // %EndTag(CALLBACK)%
 
@@ -51,7 +51,7 @@ int main(int argc, char **argv)
    * You must call one of the versions of ros::init() before using any other
    * part of the ROS system.
    */
-  ros::init(argc, argv, "listener");
+  ros::init(argc, argv, "subscriber");
 
   /**
    * NodeHandle is the main access point to communications with the ROS system.
@@ -65,7 +65,7 @@ int main(int argc, char **argv)
    * on a given topic.  This invokes a call to the ROS
    * master node, which keeps a registry of who is publishing and who
    * is subscribing.  Messages are passed to a callback function, here
-   * called chatterCallback.  subscribe() returns a Subscriber object that you
+   * called islandCallback.  subscribe() returns a Subscriber object that you
    * must hold on to until you want to unsubscribe.  When all copies of the Subscriber
    * object go out of scope, this callback will automatically be unsubscribed from
    * this topic.
@@ -76,7 +76,7 @@ int main(int argc, char **argv)
    * away the oldest ones.
    */
 // %Tag(SUBSCRIBER)%
-  ros::Subscriber sub = n.subscribe("island", 1000, chatterCallback);
+  ros::Subscriber sub = n.subscribe("island", 1000, islandCallback);
 // %EndTag(SUBSCRIBER)%
 
   /**

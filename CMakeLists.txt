@@ -159,7 +159,7 @@ include_directories(
 
 ## Mark executable scripts (Python etc.) for installation
 ## in contrast to setup.py, you can choose the destination
-catkin_install_python(PROGRAMS scripts/talker.py
+catkin_install_python(PROGRAMS scripts/publisher.py
 #   scripts/my_python_script
   DESTINATION ${CATKIN_PACKAGE_BIN_DESTINATION}
 )
@@ -205,5 +205,5 @@ catkin_install_python(PROGRAMS scripts/talker.py
 ## Add folders to be run by python nosetests
 # catkin_add_nosetests(test)
 
-add_executable(listener src/listener.cpp)
-target_link_libraries(listener ${catkin_LIBRARIES})
+add_executable(subscriber src/subscriber.cpp)
+target_link_libraries(subscriber ${catkin_LIBRARIES})
